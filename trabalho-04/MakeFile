@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS = -fopenmp
+LDFLAGS = -lm
+
+jacobi: jacobi.c
+	$(CC) $(CFLAGS) jacobi.c -o jacobi $(LDFLAGS)
+
+.PHONY: clean
+clean:
+	rm -f jacobi
